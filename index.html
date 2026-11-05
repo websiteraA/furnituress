@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MT SINAI Furniture | Solid Mahogany Furniture in Nairobi</title>
+<meta name="description" content="Solid mahogany dining sets, beds, coffee tables, sofas and timber on Ngong Road, Pathway Lane, Nairobi. Order on WhatsApp.">
+<meta property="og:title" content="MT SINAI Furniture">
+<meta property="og:description" content="Handcrafted mahogany furniture, built to last. Order on WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#top" class="logo">MT SINAI<small>Furniture</small></a>
+  <nav id="menu" aria-label="Main">
+    <a href="#shop">Shop</a><a href="#custom">Custom order</a><a href="#visit">Visit us</a>
+    <a href="#" data-tiktok target="_blank" rel="noopener">TikTok</a>
+  </nav>
+  <button class="icon" id="cartBtn" aria-label="Open cart">🛒<span id="cartCount">0</span></button>
+  <button class="icon burger" id="burger" aria-label="Menu">☰</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div>
+    <h1>Mahogany that outlives the house it's in.</h1>
+    <p>Dining sets, beds, coffee tables and sofas, finished by hand on Ngong Road. Pick what you like, send it to us on WhatsApp.</p>
+    <div class="row"><a class="btn gold" href="#shop">Shop furniture</a><a class="btn ghost" data-wa href="#">Chat on WhatsApp</a></div>
+  </div>
+  <ul class="trust"><li>Solid mahogany</li><li>Custom sizes</li><li>Delivery across Kenya</li><li>Free quotation</li></ul>
+</section>
+
+<section class="cats" id="cats" aria-label="Categories"></section>
+
+<section id="shop" class="wrap">
+  <h2>Our furniture</h2>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Search sofa, bed, dining…" aria-label="Search products">
+    <select id="sort" aria-label="Sort"><option value="">Sort: Featured</option><option value="asc">Price: low to high</option><option value="desc">Price: high to low</option></select>
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="none" class="muted" hidden>Nothing matches that search. Try another word or <a data-wa href="#">ask us on WhatsApp</a>.</p>
+</section>
+
+<section class="wrap steps">
+  <h2>How to order</h2>
+  <ol><li><b>Choose</b> the pieces you like and add them to your cart.</li><li><b>Send</b> your name, phone and location. Your order opens in WhatsApp.</li><li><b>Receive</b> a quote and delivery date from us, then pay on agreement.</li></ol>
+</section>
+
+<section id="custom" class="wrap two">
+  <div><h2>Want something made to your size?</h2><p>Tell us the piece, size and wood finish. We reply on WhatsApp with a price and timeline.</p></div>
+  <form id="customForm" class="card" novalidate>
+    <select id="cType" aria-label="Furniture type"><option>Dining set</option><option>Bed</option><option>Coffee table</option><option>Sofa set</option><option>Mahogany timber</option><option>Other</option></select>
+    <input id="cSize" placeholder="Size (e.g. 8 seater, 5x6 bed)">
+    <textarea id="cNotes" rows="3" placeholder="Describe what you want"></textarea>
+    <button class="btn brown" type="submit">Send request on WhatsApp</button>
+  </form>
+</section>
+
+<section class="wrap">
+  <h2>What customers say</h2>
+  <div class="quotes">
+    <blockquote>“The dining table finish is perfect and it arrived exactly when promised.” <cite>Wanjiru, Kilimani</cite></blockquote>
+    <blockquote>“Ordering on WhatsApp was quick. They sent photos before I paid.” <cite>Brian, Rongai</cite></blockquote>
+    <blockquote>“Our bed is solid and heavy. Worth every shilling.” <cite>Mercy, Karen</cite></blockquote>
+  </div>
+</section>
+
+<section id="visit" class="wrap two">
+  <div>
+    <h2>Visit our yard</h2>
+    <p>Ngong Road, Pathway Lane, Nairobi.<br>Open Monday to Saturday, 8am to 6pm.<br><a data-tel href="#"></a></p>
+    <p>See new pieces first on TikTok.</p>
+    <a class="btn brown" data-tiktok target="_blank" rel="noopener" href="#">Watch our latest work</a>
+  </div>
+  <iframe title="Map to MT SINAI Furniture" loading="lazy" src="https://maps.google.com/maps?q=Pathway+Lane+Ngong+Road+Nairobi&output=embed"></iframe>
+</section>
+</main>
+
+<footer><b>MT SINAI Furniture</b> · Ngong Road, Pathway Lane, Nairobi · <a data-wa href="#">WhatsApp</a> · <a data-tiktok target="_blank" rel="noopener" href="#">TikTok</a><br><small>© <span id="yr"></span> MT SINAI Furniture</small></footer>
+
+<aside id="drawer" class="drawer" aria-label="Cart" aria-hidden="true">
+  <div class="dhead"><h3>Your cart</h3><button class="icon" id="closeCart" aria-label="Close cart">✕</button></div>
+  <div id="items"></div>
+  <form id="checkout" novalidate hidden>
+    <div class="total">Total <b id="total"></b></div>
+    <input id="fName" placeholder="Full name" autocomplete="name">
+    <input id="fPhone" placeholder="Phone (e.g. 0712 345 678)" inputmode="tel" autocomplete="tel">
+    <input id="fLoc" placeholder="Delivery location / area">
+    <textarea id="fNotes" rows="2" placeholder="Notes (optional)"></textarea>
+    <p id="err" class="err" role="alert"></p>
+    <button class="btn wa" type="submit">Order via WhatsApp</button>
+  </form>
+</aside>
+<div id="scrim" class="scrim" hidden></div>
+<div id="modal" class="modal" hidden><div class="mbox" id="mbox"></div></div>
+<div id="toast" class="toast" role="status"></div>
+<a class="float" data-wa href="#" aria-label="Chat on WhatsApp">💬</a>
+<script src="script.js"></script>
+</body>
+</html>
